@@ -65,10 +65,9 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#ofertas">Ofertas</a></li>
           <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
           <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Sobre nosotros</a></li>
         </ul>
         <button id="modoBtn" class="btn btn-sm btn-outline-dark ms-3">🌙 Modo oscuro</button>
       </div>
@@ -77,7 +76,7 @@
 
   <!-- Hero -->
   <div class="container text-center py-5">
-    <h1 class="fw-bold">Bienvenido a Zapatería Elegante</h1>
+    <h1 class="fw-bold">Todo en un sólo lugar</h1>
     <p class="lead">Descubre los zapatos más modernos y cómodos para toda ocasión.</p>
     <a href="#productos" class="btn btn-custom btn-lg">Explorar colección</a>
   </div>
@@ -88,7 +87,7 @@
     <div class="row g-4 text-center">
       <div class="col-md-3">
         <div class="card h-100">
-          <img src="https://via.placeholder.com/200x150?text=Casuales" class="card-img-top" alt="Casuales">
+          <img src="img/casuales.jpg" class="card-img-top" alt="Casuales">
           <div class="card-body">
             <h5 class="card-title">Casuales</h5>
           </div>
@@ -96,7 +95,7 @@
       </div>
       <div class="col-md-3">
         <div class="card h-100">
-          <img src="https://via.placeholder.com/200x150?text=Deportivos" class="card-img-top" alt="Deportivos">
+          <img src="img/deportivos.jpg" class="card-img-top" alt="Deportivos">
           <div class="card-body">
             <h5 class="card-title">Deportivos</h5>
           </div>
@@ -104,7 +103,7 @@
       </div>
       <div class="col-md-3">
         <div class="card h-100">
-          <img src="https://via.placeholder.com/200x150?text=Formales" class="card-img-top" alt="Formales">
+          <img src="img/formales.jpeg" class="card-img-top" alt="Formales">
           <div class="card-body">
             <h5 class="card-title">Formales</h5>
           </div>
@@ -112,7 +111,7 @@
       </div>
       <div class="col-md-3">
         <div class="card h-100">
-          <img src="https://via.placeholder.com/200x150?text=Sandalias" class="card-img-top" alt="Sandalias">
+          <img src="img/sandalias.jpg" class="card-img-top" alt="Sandalias">
           <div class="card-body">
             <h5 class="card-title">Sandalias</h5>
           </div>
@@ -125,9 +124,17 @@
   <div id="productos" class="container my-5">
     <h2 class="text-center mb-4">Productos destacados</h2>
     <div class="row g-4">
+
       <div class="col-md-4">
-        <div class="card h-100 text-center">
-          <img src="img/nike_cortez.jpeg" class="card-img-top" alt="Zapato 1">
+        <div class="card h-100 text-center product-card" 
+          data-description="El clásico Nike Cortez LTR, cómodo y elegante para el día a día."
+          data-features="Material: Cuero premium | Suela: Goma antideslizante | Peso: 350g"
+          data-rating="4.8">
+          <div class="zoom-container">
+            <img src="img/nike_cortez.jpeg" class="card-img-top" alt="Zapato 1">
+            <div class="zoom-lens"></div>
+            <div class="zoom-result"></div>
+          </div>
           <div class="card-body">
             <h5 class="card-title">Nike Cortez LTR</h5>
             <p class="card-text">$169.00</p>
@@ -135,25 +142,60 @@
           </div>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="card h-100 text-center">
-          <img src="img/cat_invader_mid_vent_ct.png" class="card-img-top" alt="Zapato 2">
+        <div class="card h-100 text-center product-card"
+          data-description="CAT Invader CT, resistente y con estilo industrial para uso rudo."
+          data-features="Material: Cuero reforzado | Protección: Punta de acero | Peso: 1.2kg"
+          data-rating="4.6">
+          <div class="zoom-container">
+            <img src="img/cat_invader_mid_vent_ct.png" class="card-img-top" alt="Zapato 2">
+            <div class="zoom-lens"></div>
+            <div class="zoom-result"></div>
+          </div>
           <div class="card-body">
             <h5 class="card-title">CAT Invader CT</h5>
-            <p><p><p>
             <p class="card-text">$149.99</p>
             <a href="#" class="btn btn-custom">Comprar</a>
           </div>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="card h-100 text-center">
-          <img src="img/puma_sofia_crystaline.jpg" class="card-img-top" alt="Zapato 3">
+        <div class="card h-100 text-center product-card"
+          data-description="PUMA Sophia Crystaline, ideal para quienes buscan estilo y ligereza."
+          data-features="Material: Malla transpirable | Suela: EVA ligera | Peso: 250g"
+          data-rating="4.9">
+          <div class="zoom-container">
+            <img src="img/puma_sofia_crystaline.jpg" class="card-img-top" alt="Zapato 3">
+            <div class="zoom-lens"></div>
+            <div class="zoom-result"></div>
+          </div>
           <div class="card-body">
             <h5 class="card-title">PUMA Sophia Crystaline</h5>
             <p class="card-text">$64.99</p>
             <a href="#" class="btn btn-custom">Comprar</a>
           </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal del producto -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="modalTitle" class="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalImage" src="" alt="" class="img-fluid rounded mb-3">
+          <p id="modalDescription" class="lead"></p>
+          <p id="modalFeatures" class="text-muted"></p>
+          <div id="modalRating" class="stars mb-3"></div>
+          <button class="btn btn-custom btn-lg">🛒 Comprar ahora</button>
         </div>
       </div>
     </div>
@@ -252,11 +294,42 @@
   <!-- Bootstrap JS -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <script>
-    // Modo oscuro
+    // 🌙 Modo oscuro
     const btn = document.getElementById("modoBtn");
     btn.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
       btn.textContent = document.body.classList.contains("dark-mode") ? "☀️ Modo claro" : "🌙 Modo oscuro";
+    });
+
+    // ⭐ Modal productos
+    const modal = new bootstrap.Modal(document.getElementById("productModal"));
+    const modalTitle = document.getElementById("modalTitle");
+    const modalImage = document.getElementById("modalImage");
+    const modalDescription = document.getElementById("modalDescription");
+    const modalFeatures = document.getElementById("modalFeatures");
+    const modalRating = document.getElementById("modalRating");
+
+    document.querySelectorAll(".product-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const imgSrc = card.querySelector("img").src;
+        const title = card.querySelector(".card-title").textContent;
+        const desc = card.dataset.description;
+        const features = card.dataset.features;
+        const rating = parseFloat(card.dataset.rating);
+
+        modalTitle.textContent = title;
+        modalImage.src = imgSrc;
+        modalDescription.textContent = desc;
+        modalFeatures.textContent = features;
+
+        // ⭐ Estrellas
+        const full = Math.floor(rating);
+        const half = rating % 1 >= 0.5 ? "★½" : "";
+        const empty = 5 - Math.ceil(rating);
+        modalRating.innerHTML = "★".repeat(full) + half + "☆".repeat(empty) + ` (${rating})`;
+
+        modal.show();
+      });
     });
   </script>
 </body>
