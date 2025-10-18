@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ofertas Zapatería KAIZEN</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fffbea;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    /* Tarjetas */
+    .card {
+      border: none;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    /* Badge de liquidación más pequeño y transparente */
+    .badge-liquidacion {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: rgba(255, 105, 42, 0.50);
+      color: #fff;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.7rem;
+      font-weight: bold;
+      border-radius: 0.25rem;
+      z-index: 2;
+    }
+    /* Precios */
+    .original-price {
+      text-decoration: line-through;
+      color: #888;
+      margin-right: 0.5rem;
+    }
+    .discounted-price {
+      font-weight: bold;
+      color: #FF4C00;
+    }
+    /* Colores navbar y footer */
+    .navbar, footer {
+      background: linear-gradient(90deg, #FF8904, #FF692A);
+    }
+    .btn-custom {
+      background-color: #FF692A;
+      color: white;
+    }
+    .btn-custom:hover {
+      background-color: #FF8904;
+      color: white;
+    }
+    /* Modo oscuro */
+    .dark-mode {
+      background-color: #1a1a1a !important;
+      color: #f1f1f1 !important;
+    }
+    .dark-mode .navbar, 
+    .dark-mode footer {
+      background: linear-gradient(90deg, #333, #555);
+    }
+    .dark-mode .card {
+      background-color: #2c2c2c;
+      color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="../img/KZ.jpeg" alt="logo" width="40" height="40" class="me-2">
+        Zapatería KAIZEN
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#categorias">Categorías</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#testimonios">Testimonios</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a></li>
+        </ul>
+        <button id="modoBtn" class="btn btn-sm btn-outline-dark ms-3">🌙 Modo oscuro</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Ofertas de zapatos -->
+<div id="productos" class="container my-5">
+  <h2 class="text-center mb-4">Ofertas de zapatos - ¡Liquidación 50%!</h2>
+
+  <!-- Fila 1 -->
+  <div class="row justify-content-center g-4">
+    <!-- Producto 1 -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card h-100 text-center product-card" data-description="Nike Air Max Hombre, ideal para correr y caminar." data-features="Material: Cuero | Suela: Goma | Peso: 350g" data-rating="4.8">
+        <span class="badge-liquidacion">¡Liquidación!</span>
+        <img src="../img/nike-air-max.png" class="card-img-top" alt="Nike Air Max Hombre">
+        <div class="card-body">
+          <h5 class="card-title">Nike Air Max</h5>
+          <p><span class="original-price">$200.00</span> <span class="discounted-price">$100.00</span></p>
+          <a href="#" class="btn btn-custom">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Producto 2 -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card h-100 text-center product-card" data-description="Adidas Ultraboost Mujer, máximo confort y amortiguación." data-features="Material: Malla | Suela: EVA | Peso: 250g" data-rating="4.9">
+        <span class="badge-liquidacion">¡Liquidación!</span>
+        <img src="../img/adidas-ultraboots.png" class="card-img-top" alt="Adidas Ultraboost Mujer">
+        <div class="card-body">
+          <h5 class="card-title">Adidas Ultraboost</h5>
+          <p><span class="original-price">$180.00</span> <span class="discounted-price">$90.00</span></p>
+          <a href="#" class="btn btn-custom">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Producto 3 -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card h-100 text-center product-card" data-description="PUMA RS-X Niños, estilo y comodidad para los pequeños." data-features="Material: Sintético | Suela: Goma | Peso: 200g" data-rating="4.7">
+        <span class="badge-liquidacion">¡Liquidación!</span>
+        <img src="../img/puma-rsx.png" class="card-img-top" alt="PUMA RS-X Niños">
+        <div class="card-body">
+          <h5 class="card-title">PUMA RS-X</h5>
+          <p><span class="original-price">$100.00</span> <span class="discounted-price">$50.00</span></p>
+          <a href="#" class="btn btn-custom">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Producto 4 -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card h-100 text-center product-card" data-description="Reebok Classic Hombre, diseño retro con comodidad moderna." data-features="Material: Cuero | Suela: Goma | Peso: 320g" data-rating="4.6">
+        <span class="badge-liquidacion">¡Liquidación!</span>
+        <img src="../img/rebook-classic.png" class="card-img-top" alt="Reebok Classic Hombre">
+        <div class="card-body">
+          <h5 class="card-title">Reebok Classic</h5>
+          <p><span class="original-price">$150.00</span> <span class="discounted-price">$75.00</span></p>
+          <a href="#" class="btn btn-custom">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Producto 5 -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card h-100 text-center product-card" data-description="Vans Old Skool Mujer, perfectas para estilo urbano." data-features="Material: Lona | Suela: Goma | Peso: 300g" data-rating="4.5">
+        <span class="badge-liquidacion">¡Liquidación!</span>
+        <img src="../img/vans-old-skool.jpg" class="card-img-top" alt="Vans Old Skool Mujer">
+        <div class="card-body">
+          <h5 class="card-title">Vans Old Skool</h5>
+          <p><span class="original-price">$120.00</span> <span class="discounted-price">$60.00</span></p>
+          <a href="#" class="btn btn-custom">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fila 2 -->
+  <div class="row justify-content-center g-4 mt-3">
+    <!-- Producto 6 -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card h-100 text-center product-card" data-description="Converse Chuck Taylor Hombre, clásico intemporal." data-features="Material: Lona | Suela: Goma | Peso: 320g" data-rating="4.8">
+        <span class="badge-liquidacion">¡Liquidación!</span>
+        <img src="../img/converse-chuck.jpg" class="card-img-top" alt="Converse Chuck Taylor Hombre">
+        <div class="card-body">
+          <h5 class="card-title">Converse Chuck</h5>
+          <p><span class="original-price">$130.00</span> <span class="discounted-price">$65.00</span></p>
+          <a href="#" class="btn btn-custom">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Producto 7 -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card h-100 text-center product-card" data-description="New Balance 327 Mujer, ligereza y estilo casual." data-features="Material: Sintético | Suela: EVA | Peso: 280g" data-rating="4.7">
+        <span class="badge-liquidacion">¡Liquidación!</span>
+        <img src="../img/new-balance.png" class="card-img-top" alt="New Balance 327 Mujer">
+        <div class="card-body">
+          <h5 class="card-title">New Balance 327</h5>
+          <p><span class="original-price">$140.00</span> <span class="discounted-price">$70.00</span></p>
+          <a href="#" class="btn btn-custom">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Producto 8 -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card h-100 text-center product-card" data-description="Under Armour Charged Hombre, rendimiento deportivo superior." data-features="Material: Sintético | Suela: EVA | Peso: 310g" data-rating="4.6">
+        <span class="badge-liquidacion">¡Liquidación!</span>
+        <img src="../img/under.png" class="card-img-top" alt="Under Armour Charged Hombre">
+        <div class="card-body">
+          <h5 class="card-title">Under Armour Charged</h5>
+          <p><span class="original-price">$160.00</span> <span class="discounted-price">$80.00</span></p>
+          <a href="#" class="btn btn-custom">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Producto 9 -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card h-100 text-center product-card" data-description="Skechers D'Lites Mujer, comodidad diaria y estilo." data-features="Material: Sintético | Suela: Goma | Peso: 290g" data-rating="4.5">
+        <span class="badge-liquidacion">¡Liquidación!</span>
+        <img src="../img/skecher.png" class="card-img-top" alt="Skechers D'Lites Mujer">
+        <div class="card-body">
+          <h5 class="card-title">Skechers D'Lites</h5>
+          <p><span class="original-price">$125.00</span> <span class="discounted-price">$62.50</span></p>
+          <a href="#" class="btn btn-custom">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Producto 10 -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card h-100 text-center product-card" data-description="Nike Revolution Niños, perfecto para juegos y deportes." data-features="Material: Malla | Suela: Goma | Peso: 230g" data-rating="4.8">
+        <span class="badge-liquidacion">¡Liquidación!</span>
+        <img src="../img/nike-revolution.png" class="card-img-top" alt="Nike Revolution Niños">
+        <div class="card-body">
+          <h5 class="card-title">Nike Revolution</h5>
+          <p><span class="original-price">$90.00</span> <span class="discounted-price">$45.00</span></p>
+          <a href="#" class="btn btn-custom">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de producto -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Título del producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body d-flex flex-column flex-md-row align-items-center">
+        <img id="modalImage" src="" alt="Producto" class="img-fluid mb-3 mb-md-0 me-md-4" style="max-width: 300px;">
+        <div>
+          <p id="modalDescription" class="mb-2"><strong>Descripción:</strong></p>
+          <p id="modalFeatures" class="mb-2"><strong>Características:</strong></p>
+          <p id="modalRating" class="mb-0"><strong>Calificación:</strong></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-custom">Comprar</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pie de página -->
+<footer class="bg-dark text-light py-5 mt-5">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <h5 class="fw-bold mb-3">Zapatería KAIZEN</h5>
+        <p class="mb-0 small">
+          Calidad, estilo y comodidad en cada paso.  
+          <br>Visítanos o seguinos en nuestras redes sociales.
+        </p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <div class="mb-3">
+          <a href="#" class="text-light text-decoration-none me-3">Política de privacidad</a>
+          <a href="#" class="text-light text-decoration-none me-3">Términos y condiciones</a>
+          <a href="#" class="text-light text-decoration-none">Contáctanos</a>
+        </div>
+        <div>
+          <a href="#" class="text-light fs-4 me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light fs-4 me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light fs-4"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <div class="text-center small">
+      © 2025 Zapatería KAIZEN. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+  // Modo oscuro
+  const btn = document.getElementById("modoBtn");
+  btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    btn.textContent = document.body.classList.contains("dark-mode") ? "☀️ Modo claro" : "🌙 Modo oscuro";
+  });
+
+  // Modal productos
+  const modal = new bootstrap.Modal(document.getElementById("productModal"));
+  const modalTitle = document.getElementById("modalTitle");
+  const modalImage = document.getElementById("modalImage");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalFeatures = document.getElementById("modalFeatures");
+  const modalRating = document.getElementById("modalRating");
+
+  document.querySelectorAll(".product-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const imgSrc = card.querySelector("img").src;
+      const title = card.querySelector(".card-title").textContent;
+      const desc = card.dataset.description;
+      const features = card.dataset.features;
+      const rating = parseFloat(card.dataset.rating);
+
+      modalTitle.textContent = title;
+      modalImage.src = imgSrc;
+      modalDescription.innerHTML = `<strong>Descripción:</strong> ${desc}`;
+      modalFeatures.innerHTML = `<strong>Características:</strong> ${features}`;
+
+      const full = Math.floor(rating);
+      const half = rating % 1 >= 0.5 ? "★½" : "";
+      const empty = 5 - Math.ceil(rating);
+      modalRating.innerHTML = `<strong>Calificación:</strong> ` + "★".repeat(full) + half + "☆".repeat(empty) + ` (${rating})`;
+
+      modal.show();
+    });
+  });
+</script>
+</body>
+</html>
+
